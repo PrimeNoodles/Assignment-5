@@ -2,6 +2,7 @@ let numColumns = 3;
 let numRows = 1;
 let table = document.getElementsByTagName("tbody")[0];
 
+// add rows to the grid
 function addRow() {
     let row = document.createElement("tr");
     for (let i = 0; i < numColumns; i++) {
@@ -11,6 +12,7 @@ function addRow() {
     table.appendChild(row);
 }
 
+// remove rows from the grid
 function removeRow() {
     let row = table.lastChild;
     table.removeChild(row);
