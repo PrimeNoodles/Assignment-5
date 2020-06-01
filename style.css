@@ -1,1 +1,9 @@
+table {
+    border: black solid;
+    width: 100%;
+}
 
+tr {
+    background-color: goldenrod;
+    height: 30px;
+}
