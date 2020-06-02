@@ -97,6 +97,7 @@ function clearAll() {
     let cellsArr = [...cells];
     cellsArr.forEach(cell => {
         cell.classList.add("uncolored");
+        cell.style.backgroundColor = "gray";
     })
 }
 
