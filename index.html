@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<div class="dropDownColors">
-    <button onclick="myFunction()" class="dropbtn">Colors</button>
-    <div id="myDropdown" class="dropdown-content">
-      <a href="#Green">Green</a>
-      <a href="#Red">Red</a>
-      <a href="#Blue">Blue</a>
-      <a href="#Yellow">Yellow</a>
-    </div>
-</div>
-
-<script src="script.js"></script>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Assignment 5</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <button onclick="addRow()">Add Row</button>
+    <button onclick="removeRow()">Remove Row</button>
+    <button onclick="addColumn()">Add Column</button>
+    <button onclick="removeColumn()">Remove Column</button>
+
+    <form>
+        <p>
+            <label>Select list</label>
+            <select id="color-select" onchange="setCurrentColor(this.value)">
+                <option value="#008000">Green</option>
+                <option value="#FF0000">Red</option>
+                <option value="#0000FF">Blue</option>
+                <option value="#FFFF00">Yellow</option>
+            </select>
+        </p>
+    </form>
+
+    <button onclick="setUncolored()">Fill All Uncolored</button>
+    <button onclick="setAllCurrent()">Fill All</button>
+    <button onclick="clearAll()">Clear All</button>
+
+    <br>
+    <br>
+
     <table>
-        <tbody>
+        <tbody id="main-grid">
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="pre-row"></td>
             </tr>
         </tbody>
     </table>
-
-    <button onclick="addRow()">Add a Row</button>
-    <button onclick="removeRow()">Remove a Row</button>
 
     <script src="script.js"></script>
 </body>
